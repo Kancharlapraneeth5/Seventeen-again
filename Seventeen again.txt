@@ -1,0 +1,16 @@
+//seventeen again 389899 prints 2 since it has two 89s that sum equals to '17' 999888 prints '0' though it has three combinations of numbers which sum equals to '17'
+
+S=input()
+l=len(S)
+r=S.count('8')
+t=S.count('9')
+f=int(l/2)
+if t>r:
+    t=r
+elif r>t:
+    r=t
+if r==t and ((r+t)/2)==int(l/2):
+    print("0")
+elif r==t and ((r+t)/2)<int(l/2):
+    res=int((r+t)/2)
+    print(res)
